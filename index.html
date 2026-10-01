@@ -9,8 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* Identidad CECN: la del deck de avances (navy #14213D, acento #0B5394;
-   tipografia Newsreader + Public Sans, elegida por rseverino). La franja superior es navy en los dos modos. */
+   tipografia Newsreader + Public Sans, elegida por rseverino). Siempre en claro. */
 :root {
+  color-scheme: light;   /* siempre en claro, tambien con el sistema en oscuro (rseverino) */
   --navy:        #14213D;
   --navy-ink:    #FBFBF8;
   --navy-soft:   #BFD8D5;
@@ -29,40 +30,6 @@
   --shadow:      0 1px 2px rgba(20, 33, 61, .06), 0 4px 16px rgba(20, 33, 61, .07);
   --scrim:       rgba(20, 33, 61, .40);
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --navy:        #0E1729;
-    --blue:        #8FB2D9;
-    --blue-soft:   #1A2944;
-    --blue-line:   #2D4166;
-    --text:        #E9ECF1;
-    --text-soft:   #AEB6C2;
-    --text-mute:   #8790A0;
-    --bg:          #111A2C;
-    --bg-soft:     #16213A;
-    --card:        #172238;
-    --border:      #26324A;
-    --border-soft: #1F2A40;
-    --shadow:      0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
-    --scrim:       rgba(0, 0, 0, .55);
-  }
-}
-:root[data-theme="dark"] {
-  --navy:        #0E1729;
-  --blue:        #8FB2D9;
-  --blue-soft:   #1A2944;
-  --blue-line:   #2D4166;
-  --text:        #E9ECF1;
-  --text-soft:   #AEB6C2;
-  --text-mute:   #8790A0;
-  --bg:          #111A2C;
-  --bg-soft:     #16213A;
-  --card:        #172238;
-  --border:      #26324A;
-  --border-soft: #1F2A40;
-  --shadow:      0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
-  --scrim:       rgba(0, 0, 0, .55);
-}
 
 * { box-sizing: border-box; }
 html, body { margin: 0; }
@@ -76,7 +43,7 @@ body {
 
 /* Franja superior: navy, como la portada del deck */
 .band { background: var(--navy); color: var(--navy-ink); border-bottom: 1px solid var(--blue-line); }
-/* Barra institucional: blanca en los dos modos, porque el logo de UdeSA es a
+/* Barra institucional: blanca, porque el logo de UdeSA es a
    color sobre fondo blanco y no hay version en negativo. */
 header.top { background: #FFFFFF; border-bottom: 1px solid #DFE3E8; }
 header.top .wrap { padding-top: 14px; padding-bottom: 14px; display: flex; align-items: center; gap: 20px; }
