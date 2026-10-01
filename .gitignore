@@ -1,0 +1,7 @@
+# Repo publico: lista blanca. Solo entra lo que se nombra abajo.
+/*
+!/.gitignore
+!/README.md
+!/index.html
+!/canasta.csv
+!/canasta.xlsx
